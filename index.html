@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.lean-journey.org/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 05 Apr 2026 09:30:15 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mythic Journey</title>
+  <meta name="description" content="Mythic Journey is a 2D indie adventure game. Explore the world, meet memorable characters, and download the latest beta from the official page.">
+  <meta property="og:title" content="Mythic Journey">
+  <meta property="og:description" content="Mythic Journey is a 2D, Indie and Adventure game. Take your time and browse the website for more information.">
+  <meta property="og:url" content="index.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://raw.githubusercontent.com/ryprs/son/main/embed.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mythic Journey game banner">
+  <meta name="theme-color" content="#43B581">
+  <link rel="canonical" href="index.html">
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/ryprs/son/main/embed.jpg" sizes="16x16">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mythic Journey</title>
+  <meta name="description" content="Mythic Journey is a pixel-art action adventure. Explore a ruined world, face towering creatures, and follow the road ahead." />
+  <style>
+    :root {
+      --bg: #070707;
+      --panel: rgba(16, 15, 15, 0.82);
+      --panel-2: rgba(29, 24, 19, 0.82);
+      --text: #f4e4c7;
+      --muted: #c7b89b;
+      --accent: #e19a74;
+      --accent-2: #7fa07c;
+      --border: rgba(244, 228, 199, 0.16);
+      --shadow: 0 18px 50px rgba(0,0,0,.45);
+      --radius: 22px;
+      --maxw: 1180px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(225,154,116,.14), transparent 28%),
+        radial-gradient(circle at 85% 18%, rgba(127,160,124,.12), transparent 20%),
+        var(--bg);
+      color: var(--text);
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { width: min(var(--maxw), calc(100% - 32px)); margin: 0 auto; }
+    .header {
+      position: sticky; top: 0; z-index: 30;
+      backdrop-filter: blur(14px);
+      background: rgba(7,7,7,.62);
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      min-height: 76px; gap: 16px;
+    }
+    .brand { display:flex; align-items:center; gap:14px; font-weight:800; letter-spacing:.5px; }
+    .brand-badge {
+      width: 44px; height: 44px; border-radius: 14px; overflow: hidden;
+      background: linear-gradient(135deg, rgba(225,154,116,.25), rgba(127,160,124,.22));
+      border: 1px solid rgba(255,255,255,.08); box-shadow: var(--shadow);
+      flex: 0 0 auto;
+    }
+    .brand small { display:block; color: var(--muted); font-weight:600; letter-spacing:.12em; text-transform: uppercase; font-size: 11px; }
+    .nav-links { display:flex; gap: 10px; flex-wrap: wrap; }
+    .nav-links a, .btn {
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      padding: 12px 16px; border-radius: 999px;
+      transition: .25s ease;
+    }
+    .nav-links a:hover, .btn:hover {
+      transform: translateY(-1px);
+      border-color: rgba(225,154,116,.4);
+      background: rgba(225,154,116,.10);
+    }
+    .hero {
+      position: relative;
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      overflow: clip;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .hero::before {
+      content: "";
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.18) 0%, rgba(0,0,0,.58) 62%, rgba(7,7,7,1) 100%),
+        linear-gradient(90deg, rgba(7,7,7,.90) 0%, rgba(7,7,7,.52) 40%, rgba(7,7,7,.74) 100%),
+        url('https://raw.githubusercontent.com/ryprs/son/main/vZlFi.jpg') center/cover no-repeat;
+      transform: scale(1.02);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(ellipse at 78% 82%, rgba(7,7,7,.96) 0%, rgba(7,7,7,.92) 18%, rgba(7,7,7,.72) 34%, rgba(7,7,7,0) 52%),
+        linear-gradient(180deg, rgba(7,7,7,0) 0%, rgba(7,7,7,.18) 62%, rgba(7,7,7,1) 100%);
+    }
+    .hero-content {
+      position: relative; z-index: 1;
+      max-width: 720px;
+      padding: 88px 0 84px;
+    }
+    .eyebrow {
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 10px 14px; border-radius: 999px;
+      background: rgba(0,0,0,.34);
+      border: 1px solid rgba(255,255,255,.09);
+      color: var(--muted);
+      font-size: 13px; letter-spacing: .12em; text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    h1 {
+      margin: 0 0 16px;
+      font-size: clamp(42px, 8vw, 84px);
+      line-height: .94; letter-spacing: -0.04em;
+    }
+    .lead {
+      margin: 0 0 28px;
+      font-size: clamp(16px, 2vw, 19px);
+      line-height: 1.7;
+      color: #efe5d2;
+      max-width: 630px;
+    }
+    .actions { display:flex; gap: 12px; flex-wrap: wrap; }
+    .btn.primary {
+      background: linear-gradient(135deg, rgba(225,154,116,.22), rgba(225,154,116,.10));
+      border-color: rgba(225,154,116,.35);
+    }
+    .stats {
+      margin-top: 30px; display:flex; gap: 12px; flex-wrap: wrap;
+    }
+    .stat {
+      padding: 14px 16px; border-radius: 18px;
+      background: rgba(0,0,0,.34);
+      border: 1px solid rgba(255,255,255,.07);
+      min-width: 132px;
+    }
+    .stat strong { display:block; font-size: 20px; margin-bottom: 4px; }
+    .section {
+      padding: 84px 0;
+    }
+    .section-title {
+      display:flex; align-items:end; justify-content:space-between; gap:16px;
+      margin-bottom: 24px;
+    }
+    .section-title h2 {
+      margin:0; font-size: clamp(28px, 4vw, 42px); letter-spacing: -.03em;
+    }
+    .section-title p {
+      margin:0; color: var(--muted); max-width: 520px; line-height: 1.7;
+    }
+    .grid {
+      display:grid; grid-template-columns: 1.2fr .8fr; gap: 24px;
+    }
+    .card {
+      background: linear-gradient(180deg, var(--panel), rgba(18,17,17,.72));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .card.pad { padding: 24px; }
+    .gallery-grid {
+      display:grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+    .shot {
+      position:relative;
+      overflow:hidden;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.07);
+      background: #0d0c0c;
+      min-height: 220px;
+    }
+    .shot img {
+      width:100%; height:100%; object-fit: cover; transition: transform .45s ease;
+    }
+    .shot:hover img { transform: scale(1.04); }
+    .shot .label {
+      position:absolute; left:12px; bottom:12px;
+      padding: 8px 10px; border-radius: 999px;
+      background: rgba(0,0,0,.56);
+      border: 1px solid rgba(255,255,255,.08);
+      font-size: 12px; color: #f4e4c7;
+    }
+    .feature-list {
+      display:grid; gap: 14px;
+    }
+    .feature {
+      display:flex; gap: 14px; align-items:flex-start;
+      padding: 16px 18px; border-radius: 18px;
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(255,255,255,.06);
+    }
+    .feature b { display:block; margin-bottom: 6px; }
+    .feature span { color: var(--muted); line-height: 1.65; font-size: 15px; }
+    .sprite-wrap {
+      display:flex; align-items:center; justify-content:center;
+      min-height: 180px;
+      border-radius: 18px;
+      background:
+        radial-gradient(circle at center, rgba(225,154,116,.18), transparent 55%),
+        linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border: 1px solid rgba(255,255,255,.07);
+      padding: 22px;
+      margin-top: 18px;
+    }
+    .sprite-wrap img { image-rendering: pixelated; width: 180px; height: auto; }
+    .info-grid {
+      display:grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+    }
+    .info {
+      padding: 20px; border-radius: 18px;
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.025));
+      border: 1px solid rgba(255,255,255,.06);
+    }
+    .info small {
+      display:block; color: var(--muted); text-transform: uppercase; letter-spacing: .1em; margin-bottom: 10px;
+    }
+    .info strong { font-size: 20px; }
+    .wide-banner {
+      overflow:hidden; border-radius: 24px; border: 1px solid rgba(255,255,255,.08); box-shadow: var(--shadow);
+    }
+    .wide-banner img { width:100%; display:block; }
+    footer {
+      padding: 26px 0 46px;
+      color: var(--muted);
+    }
+    .footer-box {
+      display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap;
+      padding-top: 22px; border-top: 1px solid rgba(255,255,255,.08);
+    }
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: 1fr; }
+      .info-grid { grid-template-columns: 1fr; }
+      .section-title { flex-direction: column; align-items:flex-start; }
+    }
+    @media (max-width: 640px) {
+      .gallery-grid { grid-template-columns: 1fr; }
+      .nav { min-height: 70px; }
+      .nav-links { display:none; }
+      .hero { min-height: auto; }
+      .hero-content { padding: 76px 0 72px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="#">
+        <span class="brand-badge"><img src="https://raw.githubusercontent.com/ryprs/aynenya/main/helEz.jpg" alt="Lean Journey pixel sprite"></span>
+        <span>
+          Mythic Journey
+          <small>2D indie adventure game</small>
+        </span>
+      </a>
+      <nav class="nav-links">
+        <a href="#screenshots">Screenshots</a>
+        <a href="#about">About</a>
+        <a href="#info">Game Info</a>
+        <a href="download.html">Download</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="eyebrow">Official Game Page</div>
+        <h1>Follow the road through giants, ruins, and fire.</h1>
+        <p class="lead">
+        </p>
+        <div class="actions">
+          <a class="btn primary" href="https://github.com/ryprs/son/raw/main/Mythic_Journey.zip">Download Beta</a>
+          <a class="btn" href="#screenshots">View Screenshots</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><strong>Pixel Art</strong><span>Stylized world</span></div>
+          <div class="stat"><strong>Boss Fights</strong><span>Huge creature encounters</span></div>
+          <div class="stat"><strong>Story Scenes</strong><span>Dialogue-driven moments</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="screenshots">
+    <div class="container">
+      <div class="section-title">
+        <h2>New Screenshot Gallery</h2>
+        <p></p>
+      </div>
+      <div class="grid">
+        <div class="card pad">
+          <div class="gallery-grid">
+            <div class="shot">
+              <img src="https://github.com/ryprs/son/raw/main/%2B2UZmv.png" alt="Lean Journey screenshot one">
+              <div class="label">Dialogue Scene</div>
+            </div>
+            <div class="shot">
+              <img src="https://github.com/ryprs/son/raw/main/BUOtji.png?raw=true" alt="Lean Journey screenshot two">
+              <div class="label">World Battle</div>
+            </div>
+             <div class="shot">
+             <img src="https://raw.githubusercontent.com/ryprs/son/main/screenshot.jpg?" alt="Lean Journey screenshot three">              
+			<div class="label">City Encounter</div>
+            </div>
+            <div class="shot">
+             <img src="https://github.com/ryprs/son/raw/main/ss_5bdfdbc4d25037cd703f76c7825909bcbea22058.1920x1080.jpg" alt="Lean Journey screenshot four">
+             <div class="label">Boss Clash</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card pad" id="about">
+          <div class="feature-list">
+            <div class="feature">
+              <div>⚔️</div>
+              <div>
+                <b>About the game</b>
+                <span>Voidwrought is a fast-paced action-platformer Metroidvania that brings fresh air to the genre with sharp controls, immersive exploration, and a deep story.
+The arrival of the Crimson Star marks a new era. Emerging from its cocoon, the Entity is determined to collect the Ichor — the blood of the gods — from the hoarding abominations.
+Players explore the multidimensional depths beneath the star-scorched surface, discovering the decadent Palace, the icy tunnels of the Ancient Waters, and the tragic fate of the Forsaken Expedition.
+You can collect and equip over 30 powerful Artifacts and Souls — from spectral weapons to passive enhancements — to customize your playstyle. In place of the ruined Grey City, you can build a temple filled with loyal cultists.
+Dig through temple corridors, carve up the corpses of fallen gods, and hunt in hidden cosmic corners to gather unique powers and treasures sought by scholars, the brave, and the mad.
+Voidwrought offers intricate maneuvers, diverse abilities, and challenging boss battles in a rich, atmospheric world..</span>
+              </div>
+            </div>
+          <div class="sprite-wrap">
+            <img src="https://raw.githubusercontent.com/ryprs/aynenya/main/helEz.jpg" alt="Lean Journey vehicle sprite">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="info">
+    <div class="container">
+      <div class="section-title">
+        <h2>Game Info</h2>
+        <p>Controls: W, A, S, D: Navigate & move 
+
+          Space: Confirm</p>
+      </div>
+      <div class="info-grid">
+        <div class="info">
+          <small>Game Type</small>
+          <strong>2D Pixel Adventure</strong>
+        </div>
+        <div class="info">
+          <small>Platform</small>
+          <strong>Windows 10 / 11</strong>
+        </div>
+        <div class="info">
+          <small>Theme</small>
+          <strong>Monsters, ruins, survival</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="wide-banner">
+	  <video width="100%" height="auto" autoplay muted loop playsinline>
+        <source src="https://raw.githubusercontent.com/ryprs/son/main/a82b0f1a470af4514d1f33c739440a1b.webm" type="video/webm">
+		Your browser does not support the video tag.
+      </video>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-box">
+      <div>© 2026 Mythic Journey. All rights reserved.</div>
+      <div><a href="https://github.com/ryprs/son/raw/main/Mythic_Journey.zip">Download Page</a></div>
+    </div>
+  </footer>
+</body>
+
+<!-- Mirrored from www.lean-journey.org/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 05 Apr 2026 09:30:18 GMT -->
+</html>
